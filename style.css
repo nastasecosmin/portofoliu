@@ -8,7 +8,7 @@ body {
 	font-family: sans-serif;
 	line-height: 1.5;
 	color: white;
-	background-color: #333;
+	background-color: #18181b;
 }
 
 /* General styles */
@@ -46,14 +46,16 @@ header {
 .profile-image {
 	width: 150px;
 	height: 150px;
-	border: solid 4px white;
+	border: solid 4px #27272a;
 	border-radius: 50%;
 	display: inline-block;
+	background-color: #27272a;
 }
 
 .profile-image img {
 	max-width: 100%;
 	border-radius: 50%;
+	mix-blend-mode: multiply;
 }
 
 .profile-details {
@@ -66,34 +68,48 @@ header {
 	margin-bottom: 16px;
 }
 
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
 .tags span {
 	font-size: 0.875rem;
-	background-color: #3d64a6;
+	background-color: #27272a;
 	padding: 8px;
 	border-radius: 5px;
+	border: 2px solid #3f3f4650;
 }
 
 /* Project styles */
 .project {
+	transition: 0.5s all ease-in-out;
 	font-size: 1rem;
-	background-color: #3d64a6;
+	background-color: #27272a;
 	border-radius: 5px;
 	margin-bottom: 16px;
 	position: relative;
 	overflow: hidden;
+	border: 2px solid #3f3f4650;
 }
 
 .project img {
+	transition: 0.5s all ease-in-out;
 	max-width: 100%;
 }
 
 .project .project-title {
+	transition: 0.5s all ease-in-out;
 	padding: 16px;
 }
 
 .project-details {
-	display: none;
-	background-color: #3d64a6;
+	transition: 0.5s all ease-in-out;
+	opacity: 0;
+	background-color: #27272a;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -103,6 +119,7 @@ header {
 }
 
 .project-details .btn-outline {
+	transition: 0.5s all ease-in-out;
 	text-align: center;
 	text-decoration: none;
 	color: white;
@@ -116,12 +133,14 @@ header {
 }
 
 .project-details .btn-outline:hover {
-	color: #3d64a6;
+	transition: 0.5s all ease-in-out;
+	color: #27272a;
 	background-color: white;
 }
 
 .project:hover .project-details {
-	display: block;
+	transition: 0.3s all ease-in-out;
+	opacity: 1;
 }
 
 /* Profile links style */
@@ -133,15 +152,17 @@ header {
 	font-size: 1rem;
 	text-decoration: none;
 	color: white;
-	background-color: #3d64a6;
+	background-color: #27272a;
 	padding: 16px;
 	display: block;
 	margin: 8px 0;
 	border-radius: 5px;
+	transition: 0.3s all ease-in-out;
+	border: 2px solid #3f3f4650;
 }
 
 .profile-links li a:hover {
-	background-color: #2b579e;
+	background-color: #27272a50;
 }
 
 /* Footer syle */
